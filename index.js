@@ -75,8 +75,50 @@ const handlers = {
         this.response.speak(speechOutput);
         this.emit(':responseReady');
     },
-//*************************************
+        'NoCommunication': function () {
+        const speechOutput = "There are a lot of ways of communicating, language is only one of the ways. Find your own ways to communicate with other people. It may take time. That’s okay. Be patient. But more importantly, try to be best friend with yourself. And I am always here for you.";
 
+        this.response.cardRenderer(SKILL_NAME, 6);
+        this.response.speak(speechOutput);
+        this.emit(':responseReady');
+    },
+        'NoChange': function () {
+        const speechOutput = "Sometimes changes are good. They bring new opportunities to life. Being adaptive is an important quality. It is okay to take some time to develop that quality. But environments are not the most important thing, people are. The control is in your hands.";
+
+        this.response.cardRenderer(SKILL_NAME, 7);
+        this.response.speak(speechOutput);
+        this.emit(':responseReady');
+    },
+       'TooEmotion': function () {
+        const speechOutput = "Try to be aware of what usually upsets you and think about why. A big chance is that you were overreacting. What important is not what happened, but what you do with what happened. You attitude can change everything";
+
+        this.response.cardRenderer(SKILL_NAME, 8);
+        this.response.speak(speechOutput);
+        this.emit(':responseReady');
+    },
+         'NoTeacher': function () {
+        const speechOutput = "What do you like? What do you want to learn? You can always develop your interests outside school, there is no confliction. But what teachers teach at school is beyond the content, it’s important in building your ability of learning, critical thinking, and perseverance. You will need these qualities your whole life.";
+
+        this.response.cardRenderer(SKILL_NAME, 9);
+        this.response.speak(speechOutput);
+        this.emit(':responseReady');
+    },
+        'NoPlayer': function () {
+        const speechOutput = "People can be shy. They don’t come to ask you to play with them is probably because they are not sure if you want to play with them. Maybe you are shy too. So if you want to play with someone, don’t be shy. Just go and ask them. You have every right to choose your friends but you need to let them know first that you want to be friends with them.";
+
+        this.response.cardRenderer(SKILL_NAME, 10);
+        this.response.speak(speechOutput);
+        this.emit(':responseReady');
+    },
+        'BeInvisible': function () {
+        const speechOutput = "Nobody is perfect. We all have flaws. I understand that attention from others can put pressure on people sometimes. But you don’t need to care about other people’s opinions that much. They are not important. Get rid of your “imaginary audience” so you can live your own life.";
+
+        this.response.cardRenderer(SKILL_NAME, 11);
+        this.response.speak(speechOutput);
+        this.emit(':responseReady');
+    },
+//*************************************    
+    
     'AMAZON.HelpIntent': function () {
         const speechOutput = HELP_MESSAGE;
         const reprompt = HELP_REPROMPT;
@@ -100,4 +142,3 @@ exports.handler = function (event, context, callback) {
     alexa.registerHandlers(handlers);
     alexa.execute();
 };
- 
