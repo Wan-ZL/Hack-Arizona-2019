@@ -1,0 +1,3 @@
+README: https://developers.google.com/maps/documentation/distance-matrix/intro#travel_modes
+
+LINK:  https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=32.231069,%20-110.950718&destinations=32.224699,%20-110.955457&key=AIzaSyB98bgwQ00-fXzUyw2xB3VGOFrGef5lA9E
