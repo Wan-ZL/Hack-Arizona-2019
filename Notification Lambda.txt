@@ -1,0 +1,21 @@
+Reference: https://developer.amazon.com/docs/alexa-voice-service/notifications.html
+
+Sample Message
+
+{
+    "directive": {
+        "header": {
+            "namespace": "Notifications",
+            "name": "SetIndicator",
+            "messageId": "{{STRING}}"
+        },
+        "payload": {
+            "persistVisualIndicator": {{BOOLEAN}},
+            "playAudioIndicator": {{BOOLEAN}},
+            "asset": {
+                "assetId": "{{STRING}}",
+                "url": "{{STRING}}"
+            }
+        }
+    }
+}
