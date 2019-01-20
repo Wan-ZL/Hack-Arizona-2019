@@ -49,15 +49,18 @@
             // Current var currentLocation shows the location of Bob
 
             var distance = 'https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=' + pos.lat + ',%20' + pos.lng+'&destinations=32.224699,%20-110.955457&key=AIzaSyB98bgwQ00-fXzUyw2xB3VGOFrGef5lA9E';
+
             $.getJSON(distance, function(data) {
                 console.log(data);
                 var currentLocation = data.origin_addresses[0];
                 var time = data.rows[0].elements[0].duration.text;
                 console.log(currentLocation);
                 console.log(time);
+                document.open();
+                document.write(currentLocation + "+" + time);
+                document.close();
             });
-
-            console.log(distance);
+            //console.log(distance);
             infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.');
             infoWindow.open(map);
